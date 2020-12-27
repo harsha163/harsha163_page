@@ -4,53 +4,15 @@
 <html lang="en" dir="ltr">
   <head>
     <title>harsha163</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/base_styles.css">
   </head>
-  <style>
-    body{
-      margin: 0px;
-      border: 0px;
-      /*padding-top: 40px;*/
-    }
-    #nav_bar{
-      width: 100%;
-      height: 50px;
-      background-color: black;
-      color: white;
-      position:fixed;
-      top:0;
-    }
-
-    #nav_bar a img{
-      max-height:100%;
-      float: left;
-      /*padding:15px;*/
-    }
-    #nav_link_div{
-      /* for getting the border inside*/
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      /* for vertically centering the text inside the  div*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height:100%;
-      background-color: red;
-      /*for removing the underline*/
-      text-decoration: none;
-      padding:0 15px;
-      border: 3px solid green;
-      /*text-align:center;*/
-      float:right;
-    }
-  </style>
-  <body>
-    <div id="nav_bar">
-      <a href="" id="profile_pic"><img src="./assets/img/nature_profile.jpg" alt="profile pic"></a>
+  <body class="nav_bar_body">
+    <div class="nav_bar">
+      <a href="" id="profile_pic"><img src="{{site.baseurl}}/assets/img/nature_profile.jpg" alt="profile pic"></a>
       
-      <a href="" id="nav_bar_link"> <div id="nav_link_div" style="background-color:green; border: 3px solid white;">Experimental </div></a>
-      <a href="" id="nav_bar_link"> <div id="nav_link_div" style="background-color:blue; border: 3px solid yellow;">Projects </div></a>
-      <a href="" id="nav_bar_link"> <div id="nav_link_div">Home </div></a>
+      <a href="" > <div class="exp_button" >Experimental </div></a>
+      <a href="" > <div class="proj_button" >Projects </div></a>
+      <a href="" > <div class="home_button">Home </div></a>
     </div>
     {{ content}}
   </body>

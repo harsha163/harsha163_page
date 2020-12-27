@@ -1,0 +1,49 @@
+---
+---
+
+@mixin nav_link_div($bgnd_color, $border_color)
+	// for getting the border inside
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	// for vertically centering the text inside the  div
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	background-color: $bgnd_color
+	//	for removing the underline
+	text-decoration: none
+	padding: 0 15px
+	border: 3px solid $border_color
+	//	text-align: center
+	float: right
+
+.nav_bar_body
+	margin: 0px
+	border: 0px
+
+.nav_bar
+	width: 100%
+	height: 50px
+	background-color: black
+	color: white
+	position: fixed
+	top: 0
+	a 
+		img
+			float: left
+			max-height: 100%
+			// padding:15px
+
+.exp_button
+	@include nav_link_div(green, white)
+
+.proj_button
+	@include nav_link_div(blue, yellow)
+	
+.home_button
+	@include nav_link_div(red, pink)
+	
+
+	
